@@ -1,0 +1,31 @@
+---
+const { title , parrafo  } = Astro.props;
+
+---
+<article class="main-simple-boxes">
+    <h1>{title}</h1>
+    <p>{parrafo}</p>
+    <slot name="imgAfter"/>
+</article>
+
+<style>
+    .main-simple-boxes{
+        display:flex ;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1{
+        color:#4e7ea9;
+        font-size: 40px;
+    }
+    p{
+        color:#cedce9 ;
+        font-size: 20px;
+        text-align: start;
+        text-wrap: pretty;
+        max-width: 900px;
+        text-align: center;
+    }
+
+</style>
