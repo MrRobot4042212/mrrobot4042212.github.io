@@ -1,0 +1,51 @@
+---
+const { name, link, classProp } = Astro.props;
+---
+<a href={ link }>
+    <button class={ classProp } type="button"> 
+        { name }
+    </button>
+</a>
+
+<style>
+    *{
+        font-family: 'montserrat';
+        color: #cedce9;
+        font-size: 15px;
+    }
+    .buttonBordered{
+        background: transparent;
+        border-radius: 10px;
+        padding: 5px;
+        border: 2px #4e7ea9 solid;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        max-width: 150px;
+        margin-right: 5px;
+        font-size: 20px;
+
+    }
+
+    .buttonNormal{
+        background: transparent;
+        border-radius: 10px;
+        padding: 5px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        max-width: 150px;
+        margin-right: 5px;
+        border: 0;
+        font-size: 20px;
+
+    }
+
+    
+    button:hover   {
+        transform: scale(1.05);
+        background-color:#4e7ea9 ;
+    }
+    a{
+        text-decoration: none;
+    }
+
+</style>

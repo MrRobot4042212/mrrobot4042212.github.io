@@ -1,7 +1,7 @@
 ---
 const { url , download, socialName } = Astro.props;
 ---
-        <span>
+        <span class="media-button">
             <a class="link-media-icon" href={url} download={download}>
                 <h4
                     class="name-media-icon"
@@ -9,7 +9,7 @@ const { url , download, socialName } = Astro.props;
                     {socialName}
                 </h4>
                 <span class="img-media-icon">
-                    <slot class="svg" name="hd-svg"></slot>
+                    <slot class="svg" name="hd-svg"/>
                 </span>
             </a>
         </span>
@@ -21,10 +21,11 @@ const { url , download, socialName } = Astro.props;
     font-weight: 400;
     font-size: 15px;
     transition: all 0.2s linear;
+    font-size: 20px;
 }
 .img-media-icon {
     color: #fff;
-    transition: all 0.5s linear;    
+    transition: all 0.5s linear; 
 }
 .link-media-icon{
     display: flex;
@@ -34,20 +35,18 @@ const { url , download, socialName } = Astro.props;
     align-items: center;
     flex-wrap: wrap;
 }
-span{
+.media-button{
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        z-index: 10;
 }
-span :hover *{
+.media-button :hover *{
     transform: scale(1.05);
     color:#4e7ea9 ;
 }
-.svg{
-    text-align: center;
-    align-content: center;
-}
+
 a{
     text-decoration: none;
 }
