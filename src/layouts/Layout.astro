@@ -141,10 +141,9 @@ const { title } = Astro.props;
 		position: relative;
 		margin: 0px 30px;
 		column-gap: 20px;
-		justify-content: flex-start;
-		align-content: center;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		padding-bottom: 30px;
+		justify-content: flex-start;
 	}
 	.right-column p{
 		width:100%;
@@ -153,10 +152,12 @@ const { title } = Astro.props;
 		color: #4e7ea9;
 		max-width: 700px;
 		margin: 0;
+		font-size: 30px;
 	}
 	.container p{
 		color: #cedce9;
 		max-width: 700px;
+		font-size: 20px;
 	}
 	.container footer{
 		color: rgb(206, 220, 233,0.5);
@@ -172,8 +173,6 @@ const { title } = Astro.props;
 		width: 2px;
 		z-index: 0;
 	}
-
-
 
     .main-content button{
         background: transparent;

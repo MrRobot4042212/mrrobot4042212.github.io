@@ -6,10 +6,15 @@ const contentMap = {
     right: [
         { 
         title: 'INDRA Sistemas | Sistemas ATM (Practicas)',
-        description:'Ayudante de instalación de sistemas ATM, instalación de sistemas propietarios, scripting mmanipulación de base de datos Mysql y postgreSQL' },
+        description:'Ayude en la instalacion de diferentes subsistemas relacionados con ATM, realice la instalacion del software propietario de INDRA en diferentes dispositivos a la vez que ayude a realizar la creación de la base de datos (PostgreSQL).',
+        description2:'Tuvimos un retorno de un string (Conjunto de dispositivos) de un curso, por lo que tuvimos que realizar la instalacion desde cero de todo un string  para diferentes proyectos a la vez, actuamos de inmediato con la coordinación y estructuracion fisica de los dispositivos, despues creamos diferentes grupos para realizar un trabajo sincronizado con la instalacion de cada proyecto, cada proyecto requería de una base de datos, el sistema propietario y la creacion de scrips para una automatización de la instalación, el resultado fue exitoso por lo que todo el string se instaló en el plazo establecido para trabajar en el mismo.--  '
+      },
+        
         {
         title: 'Infibail Ibérica | Técnico Informático',
-        description:'Administrador de sistemas, Mantenimiento y reparación de equipos , Preparación de pedidos y tareas ofimáticas' },
+        description:'Me encarge de la administracion de sistemas para la empresa junto a un equipo especializado para ello, mantenimiento y reparacion de equipos informáticos y la preparación de pedidos.',
+        description2:'Cuando trabajamos en la empresa, tuvimos que hacer una reparación de un equipo informático que no funcionaba correctamente, despues de muchas horas de busqueda y solucion, logramos que el problema se solucionara por completo, despues de realizar un diagnostico del problema, encontramos que el problema era un problema de corriente eléctrica en la caja del equipo'
+    }
     ],
     left: [
       { imagen: "/image/icons/indra.webp", 
@@ -219,7 +224,7 @@ const contentMap = {
       },
       { 
         title: 'Back-end',  
-        description: 'Mysql, MariaDB, PostgreSQL, InnoDB, PHP, C#,    ',
+        description: 'Mysql, MariaDB, PostgreSQL, InnoDB, PHP, C#, Python.',
       },
       { 
         title: 'SO',  
@@ -359,6 +364,7 @@ const DynamicContent = () => {
                   <p>{item.fecha}</p>
                   <footer>{item.description}</footer>
                   <p>{rightContent[index].description}</p>
+                  <p>{rightContent[index].description2}</p>
                   {rightContent[index].link1 && rightContent[index].link2 && (
                     <nav id='sublinks-content'>
                       <a  href={rightContent[index].link1.href}>{rightContent[index].link1.text}</a>
