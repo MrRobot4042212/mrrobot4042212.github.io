@@ -17,11 +17,22 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
 
-      - name: Install, build, and upload your site
-        uses: withastro/action@v2
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
         with:
-          node-version: 20 # Especifica la versión de Node que deberías usar para construir tu sitio.
-          package-manager: npm # Cambia esto si usas otro gestor de paquetes como yarn o pnpm
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build the site
+        run: npm run build
+
+      - name: Upload dist folder
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
 
   deploy:
     needs: build
@@ -29,6 +40,12 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+
+      - name: Download dist folder
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
