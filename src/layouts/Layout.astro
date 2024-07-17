@@ -34,9 +34,11 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	html{
+		scroll-behavior: smooth;
+	}
 	body{
 		font-family: 'montserrat';
-		scroll-behavior: smooth;
 		position: relative;
 		background-color: #101720;
 		display: flex;
@@ -137,7 +139,7 @@ const { title } = Astro.props;
 		display: flex;
 		flex-direction: row;
 		position: relative;
-		margin: 0px 25px;
+		margin: 0px 30px;
 		column-gap: 20px;
 		justify-content: flex-start;
 		align-content: center;

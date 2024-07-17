@@ -2,11 +2,11 @@
 import Icons from "./icons.astro"
 import Image from "astro/components/Image.astro"
 import Buttons from './buttons.astro'
+import Avatar from '../../public/image/avatar-recortado.webp'
+
 
 ---
-<header id="sticky-parallax-header">            
-
-        <aside>
+<header id="sticky-parallax-header">    
             <nav id="buttons" class="hd-media-icons">
                 <Buttons
                 classProp="buttonNormal"
@@ -60,20 +60,20 @@ import Buttons from './buttons.astro'
             </svg>
             </Icons>    
         </nav>
-    </aside>
 </header>
 
 <style>
     header{
         display: flex;
         width: 100%;
-        justify-content: space-evenly;
         background-color: #293b51;
         flex-wrap: wrap;
         align-content: center;
         align-items: center;
         position: relative;
         z-index: 10;
+        flex-direction: column;
+        justify-content: center;
     }
 
     header::before{
@@ -196,6 +196,7 @@ import Buttons from './buttons.astro'
                 background-position: 50% 100%;
                 height: 10vh;
                 font-size: 2em;
+                flex-direction: row;
             }
         }
 </style>
