@@ -187,31 +187,31 @@ const contentMap = {
       },
     ],
     left: [
-      { 
-        imagen: "/image/icons/maraboo.webp", 
-        description: 'Proyecto de sitio web para la asociación sin ánimo de lucro "La Mirada de Maraboo"',
-        fecha: "In development",
+      {
+        imagen: "/image/icons/maraboo.webp",
+        description: 'Website project for the non-profit association "La Mirada de Maraboo"',
+        date: "In development",
         alt: 'La Mirada de Maraboo Logo',
         title: 'MRB',
       },
-      { 
-        imagen: "/image/icons/PP.webp", 
-        description: 'Proyecto de sitio web / aplicación movil que tiene diferentes herramientas para ayudarte en tu viaje fitness',
-        fecha: "In development",
+      {
+        imagen: "/image/icons/PP.webp",
+        description: 'Website / mobile app project that has different tools to help you on your fitness journey',
+        date: "In development",
         alt: 'PowerPulse Logo',
         title: 'PP',
       },
-      { 
-        imagen: "/image/icons/hamitiNews.webp", 
-        description: 'Trabajo fin de curso de ASIR 2024 (Grupo 5) - Universidad Europea de Madrid (Alcobendas',
-        fecha: "10/06/2024",
+      {
+        imagen: "/image/icons/hamitiNews.webp",
+        description: 'End of course project for ASIR 2024 (Group 5) - European University of Madrid (Alcobendas)',
+        date: "06/10/2024",
         alt: 'El Hamiti news Logo',
         title: 'HN',
       },
-      { 
-        imagen: "/image/icons/FNC.webp", 
-        description: 'Trabajo de realización de un sitio web para la asignatura implantacion web de 1ºASIR',
-        fecha: "20/01/2024",
+      {
+        imagen: "/image/icons/FNC.webp",
+        description: 'Project for creating a website for the 1st year ASIR web implementation subject',
+        date: "01/20/2024",
         alt: 'FNC Logo',
         title: 'FNC',
       },
