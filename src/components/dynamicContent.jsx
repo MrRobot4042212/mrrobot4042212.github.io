@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import Buttons from './buttons.astro';
 
 const contentMap = {
-  'Experiencia laboral': {
+  'Work experience': {
     right: [
         { 
-        title: 'INDRA Sistemas | Sistemas ATM (Practicas)',
-        description:'Ayude en la instalacion de diferentes subsistemas relacionados con ATM, realice la instalacion del software propietario de INDRA en diferentes dispositivos a la vez que ayude a realizar la creación de la base de datos (PostgreSQL).',
-        description2:'Tuvimos un retorno de un string (Conjunto de dispositivos) de un curso, por lo que tuvimos que realizar la instalacion desde cero de todo un string  para diferentes proyectos a la vez, actuamos de inmediato con la coordinación y estructuracion fisica de los dispositivos, despues creamos diferentes grupos para realizar un trabajo sincronizado con la instalacion de cada proyecto, cada proyecto requería de una base de datos, el sistema propietario y la creacion de scrips para una automatización de la instalación, el resultado fue exitoso por lo que todo el string se instaló en el plazo establecido para trabajar en el mismo.--  '
+        title: 'INDRA Sistemas | ATM Sytems',
+        description: 'Assisted in the installation of different subsystems related to ATMs, carried out the installation of INDRAs proprietary software on various devices while also helping to create the database (PostgreSQL).',
+        description2: 'We had a return of a string (Set of devices) from a course, so we had to perform the installation from scratch of an entire string for different projects at the same time, we acted immediately with the coordination and physical structuring of the devices, then we created different groups to perform a synchronized work with the installation of each project, each project required a database, the proprietary system and the creation of scripts for an automation of the installation, the result was successful so the entire string was installed within the established deadline to work on it. '
       },
         
         {
-        title: 'Infibail Ibérica | Técnico Informático',
-        description:'Me encarge de la administracion de sistemas para la empresa junto a un equipo especializado para ello, mantenimiento y reparacion de equipos informáticos y la preparación de pedidos.',
-        description2:'Cuando trabajamos en la empresa, tuvimos que hacer una reparación de un equipo informático que no funcionaba correctamente, despues de muchas horas de busqueda y solucion, logramos que el problema se solucionara por completo, despues de realizar un diagnostico del problema, encontramos que el problema era un problema de corriente eléctrica en la caja del equipo'
-    }
+        title: 'Infibail Ibérica | IT technician',
+        description: 'I was in charge of the companys systems administration along with a specialized team for this purpose, maintenance and repair of computer equipment, and preparation of orders.',
+        description2: 'When we worked at the company, we had to repair a piece of computer equipment that was not working correctly. After many hours of searching and solving, we managed to completely resolve the problem. After diagnosing the issue, we found that the problem was an electrical current issue in the equipments case.'
+        }
     ],
     left: [
       { imagen: "/image/icons/indra.webp", 
@@ -31,23 +31,24 @@ const contentMap = {
       },
     ],
   },
-  'Educación': {
+  'Education': {
     right: [
-      { 
-      title: 'Técnico de administración de Sistemas Informáticos en Red',
-      description:'Universidad Europea Madrid (Alcobendas).' },
       {
-      title: 'Sistemas Microinformáticos y redes',
-      description:'I.E.S Santa María de los Apóstoles.'
+        title: 'Network Computer Systems Administration Technician',
+        description: 'European University Madrid (Alcobendas).'
       },
       {
-      title: 'Grado de Ingeniería y producción de audio',
-      description:'SAE Institute.' 
-    },
-      {
-        title: 'Educación Secundaria Obligatoria',
-        description:'Colegio Ártica.'
+        title: 'Microcomputer Systems and Networks',
+        description: 'I.E.S Santa María de los Apóstoles.'
       },
+      {
+        title: 'Audio Engineering and Production Degree',
+        description: 'SAE Institute.'
+      },
+      {
+        title: 'Compulsory Secondary Education',
+        description: 'Colegio Ártica.'
+      }
   ],
   left: [
     { imagen: "/image/icons/UEM.webp", 
@@ -76,35 +77,35 @@ const contentMap = {
     },
   ],
   },
-  'Cursos': {
+  'Curses': {
     right: [
-      { 
-        title: 'CS50s Introduction to computer science',
-        description:'Harvard University. Instructor: David J. Malan' 
+      {
+        title: 'CS50s Introduction to Computer Science',
+        description: 'Harvard University. Instructor: David J. Malan'
       },
-      { 
+      {
         title: 'JavaScript Essentials 1 (JSE)',
-        description:'Universidad Europea de Madrid. Instructor: Adrián Ciudad Sanz' 
+        description: 'European University of Madrid. Instructor: Adrián Ciudad Sanz'
       },
-      { 
+      {
         title: 'Cybersecurity Essentials',
-        description:'Universidad Europea de Madrid. Instructor: Adrián Ciudad Sanz' 
+        description: 'European University of Madrid. Instructor: Adrián Ciudad Sanz'
       },
-      { 
+      {
         title: 'Big Data & Analytics',
-        description:'Universidad Europea de Madrid. Instructor: Adrián Ciudad Sanz' 
+        description: 'European University of Madrid. Instructor: Adrián Ciudad Sanz'
       },
-      { 
+      {
         title: 'Introduction to Cybersecurity',
-        description:'Universidad Europea de Madrid. Instructor: Adrián Ciudad Sanz' 
+        description: 'European University of Madrid. Instructor: Adrián Ciudad Sanz'
       },
-      { 
+      {
         title: 'NDG Linux Essentials',
-        description:'Universidad Europea de Madrid. Instructor: Ismael El Hamiti Molina' 
+        description: 'European University of Madrid. Instructor: Ismael El Hamiti Molina'
       },
-      { 
-        title: 'CCNAv7: Introducción a Redes',
-        description:'Universidad Europea de Madrid. Instructor: Ricardo Laorga Suárez' 
+      {
+        title: 'CCNAv7: Introduction to Networks',
+        description: 'European University of Madrid. Instructor: Ricardo Laorga Suárez'
       },
     ],
     left: [
@@ -158,30 +159,30 @@ const contentMap = {
       
     ],
   },
-  'Proyectos': {
+  'Projects': {
     right: [
-      { 
+      {
         title: 'La Mirada de Maraboo',
-        description: 'La Asociación "La Mirada de Maraboo" se compromete a mejorar la vida de 100 niños en situación de orfandad en Tanzania, específicamente en el el orfanato "Msamaria" en el pueblo de Moshi. Nuestra misión es brindarles un hogar seguro, acceso a educación de calidad, atención médica y apoyo emocional, para que puedan crecer y desarrollarse en un entorno propicio.',
-        link1: { href: 'https://mrrobot4042212.github.io/La_mirada_de_maraboo.github.io/', text: 'Web' },
+        description: 'The "La Mirada de Maraboo" Association is committed to improving the lives of 100 orphaned children in Tanzania, specifically at the "Msamaria" orphanage in the town of Moshi. Our mission is to provide them with a safe home, access to quality education, medical care, and emotional support, so they can grow and develop in a conducive environment.',
+        link1: { href: 'https://mrrobot4042212.github.io/La_mirada_de_maraboo.github.io/', text: 'Website' },
         link2: { href: 'https://github.com/MrRobot4042212/la-mirada-de-maraboo-V2', text: 'Github' },
       },
       { 
         title: 'PowerPulse',
-        description: '"PowerPulse" es una plataforma fitness que ofrece herramientas como una calculadora de calorías diarias y un planificador de comidas personalizado. También incluye rutinas de entrenamiento variadas y seguimiento de progreso, todo diseñado para ayudarte a alcanzar tus objetivos de forma efectiva. La plataforma cuenta con una variedad de herramientas que abarcan diferentes aspectos de tu viaje fitness.',
-        link1: { href: 'https://mrrobot4042212.github.io/PowerPulse.github.io/', text: 'Web' },
+        description: '"PowerPulse" is a fitness platform that offers tools such as a daily calorie calculator and a personalized meal planner. It also includes varied workout routines and progress tracking, all designed to help you effectively reach your goals. The platform features a variety of tools that cover different aspects of your fitness journey.',
+        link1: { href: 'https://mrrobot4042212.github.io/PowerPulse.github.io/', text: 'Website' },
         link2: { href: 'https://github.com/MrRobot4042212/PowerPulse.github.io', text: 'Github' },
       },
       { 
         title: 'El Hamiti News',
-        description: 'El Hamiti News tiene como objetivo el diseño, desarrollo e implementación de una plataforma de noticias especializadas en el ámbito de la informática y la tecnología. Esta plataforma tiene como misión proporcionar información precisa, oportuna y relevante sobre los últimos desarrollos en la industria tecnológica, incluyendo innovaciones en hardware y software, tendencias en inteligencia artificial, ciberseguridad, entre otros.',
-        link1: { href: '/public/utils/Grupo05_Memoria_ElHamitiNews.pdf', text: 'Memoria' },
+        description: 'El Hamiti News aims at the design, development, and implementation of a news platform specialized in the field of computing and technology. This platforms mission is to provide accurate, timely, and relevant information on the latest developments in the tech industry, including innovations in hardware and software, trends in artificial intelligence, cybersecurity, among others.',
+        link1: { href: '/public/utils/Grupo05_Memoria_ElHamitiNews.pdf', text: 'Report' },
         link2: { href: 'https://github.com/MrRobot4042212/El-Hamiti-News.github.io', text: 'Github' },
       },
       { 
         title: 'FilmsNCritics',
-        description: 'FilmsNcritics es una plataforma en línea dedicada a recopilar y presentar opiniones de usuarios sobre películas de diversas épocas, géneros y culturas cinematográficas. La página web se ha establecido como un espacio interactivo donde los amantes del cine pueden expresar sus pensamientos y evaluaciones sobre las últimas producciones cinematográficas, clásicos atemporales y películas independientes. FilmsNcritics también proporciona información detallada sobre las películas y una interfaz intuitiva y amigable.',
-        link1: { href: 'https://mrrobot4042212.github.io/FNC.github.io/', text: 'Web' },
+        description: 'FilmsNCritics is an online platform dedicated to collecting and presenting user opinions on movies from various eras, genres, and cinematic cultures. The website has established itself as an interactive space where movie lovers can express their thoughts and evaluations on the latest film productions, timeless classics, and independent movies. FilmsNCritics also provides detailed information about the movies and an intuitive and user-friendly interface.',
+        link1: { href: 'https://mrrobot4042212.github.io/FNC.github.io/', text: 'Website' },
         link2: { href: 'https://github.com/MrRobot4042212/FNC.github.io', text: 'Github' },
       },
     ],
@@ -189,14 +190,14 @@ const contentMap = {
       { 
         imagen: "/image/icons/maraboo.webp", 
         description: 'Proyecto de sitio web para la asociación sin ánimo de lucro "La Mirada de Maraboo"',
-        fecha: "En desarrollo",
+        fecha: "In development",
         alt: 'La Mirada de Maraboo Logo',
         title: 'MRB',
       },
       { 
         imagen: "/image/icons/PP.webp", 
         description: 'Proyecto de sitio web / aplicación movil que tiene diferentes herramientas para ayudarte en tu viaje fitness',
-        fecha: "En desarrollo",
+        fecha: "In development",
         alt: 'PowerPulse Logo',
         title: 'PP',
       },
@@ -216,23 +217,23 @@ const contentMap = {
       },
     ],
   },
-  'Aptitudes': {
+  'Skills': {
     right: [
-      { 
-        title: 'Front-end', 
-        description: 'HTML, CSS, Vanilla javaScript, Vite, React.js, JQuery, ASTRO , Sass, WordPress, Git, Github. ',
+      {
+        title: 'Front-end',
+        description: 'HTML, CSS, Vanilla JavaScript, Vite, React.js, JQuery, ASTRO, Sass, WordPress, Git, Github.',
       },
-      { 
-        title: 'Back-end',  
-        description: 'Mysql, MariaDB, PostgreSQL, InnoDB, PHP, C#, Python.',
+      {
+        title: 'Back-end',
+        description: 'MySQL, MariaDB, PostgreSQL, InnoDB, PHP, C#, Python.',
       },
-      { 
-        title: 'SO',  
-        description: 'Windows, Ubuntu, Debian, CentOS, Redhat , Raspberry Pi, Lenguaje de comandos (Bash y batch)   ',
+      {
+        title: 'OS',
+        description: 'Windows, Ubuntu, Debian, CentOS, Redhat, Raspberry Pi, Command Language (Bash and batch).',
       },
-      { 
-        title: 'Microservicios',  
-        description: 'DHCP, Bind9, OpenVPN, Wireguard, OpenSSL, Encriptación, Apache2, Nginx, BBDD, Docker, Kubernetes, LXC, VMware Workstation, Oracle VM VirtualBox.      ',
+      {
+        title: 'Microservices',
+        description: 'DHCP, Bind9, OpenVPN, Wireguard, OpenSSL, Encryption, Apache2, Nginx, Databases, Docker, Kubernetes, LXC, VMware Workstation, Oracle VM VirtualBox.',
       },
     ],
     left: [
@@ -262,23 +263,29 @@ const contentMap = {
   },
   'Soft Skills': {
     right: [
-      {title: 'Adaptación', 
-        description: 'Soy capaz de ajustarme rápidamente a nuevos entornos y situaciones, aprendiendo y creciendo con cada cambio.',
+      {
+        title: 'Adaptability',
+        description: 'I am able to quickly adjust to new environments and situations, learning and growing with each change.',
       },
-      {title: 'Interés', 
-        description: 'Me intereso genuinamente por aprender y mejorar continuamente, mostrando entusiasmo por mi trabajo.',
+      {
+        title: 'Interest',
+        description: 'I genuinely take an interest in learning and continuously improving, showing enthusiasm for my work.',
       },
-      {title: 'Iniciativa', 
-        description: 'Tomo acciones proactivas sin necesidad de ser solicitado, identificando y abordando oportunidades y problemas.',
+      {
+        title: 'Initiative',
+        description: 'I take proactive actions without needing to be asked, identifying and addressing opportunities and problems.',
       },
-      {title: 'Trabajo en Equipo', 
-        description: 'Colaboro eficazmente con los demás, comunicándome bien y respetando las ideas de mis compañeros.',
+      {
+        title: 'Teamwork',
+        description: 'I collaborate effectively with others, communicating well and respecting my colleagues\' ideas.',
       },
-      {title: 'Trato con el Cliente', 
-        description: 'Interacciono de manera positiva con los clientes, entendiendo sus necesidades y ofreciendo soluciones adecuadas.',
+      {
+        title: 'Customer Service',
+        description: 'I interact positively with customers, understanding their needs and offering appropriate solutions.',
       },
-      {title: 'Profesionalidad', 
-        description: 'Me comporto de manera ética y responsable, cumpliendo con los estándares y representando a mi organización positivamente.',
+      {
+        title: 'Professionalism',
+        description: 'I behave in an ethical and responsible manner, adhering to standards and positively representing my organization.',
       },
     ],
     left: [
@@ -302,30 +309,33 @@ const contentMap = {
       },
     ],
   },
-  'Recomendaciones': {
+  'Recomendations': {
     right: [
-      {title: 'Adrián Ciudad Sanz', 
+      {
+        title: 'Adrián Ciudad Sanz',
         link1: { href: 'mailto:a.ciudad@universidadeuropea.es', text: 'Email' },
         link2: { href: 'https://www.linkedin.com/in/adrian-ciudad/', text: 'Linkedin' },
       },
-      {title: 'Ismael El Hamiti Molina', 
+      {
+        title: 'Ismael El Hamiti Molina',
         link1: { href: 'mailto:ielhamiti@educa.madrid.org', text: 'Email' },
         link2: { href: 'https://www.linkedin.com/in/el-hamiti/', text: 'Linkedin' },
       },
-      {title: 'Brice Magd', 
+      {
+        title: 'Brice Magd',
         link1: { href: 'mailto:brice.magd@infibail.com', text: 'Email' },
         link2: { href: 'Business Development Manager- INFIBAIL Ibérica', text: 'Linkedin' },
       },
 
     ],
     left: [
-      { 
-        description: 'Mentor 2º año ASIR - Universidad Europea Madrid',
+      {
+        description: 'Mentor 2nd year ASIR - European University Madrid',
       },
-      { 
-        description: 'Mentor 1er año ASIR - Universidad Europea Madrid',
+      {
+        description: 'Mentor 1st year ASIR - European University Madrid',
       },
-      { 
+      {
         description: 'Business Development Manager- INFIBAIL Ibérica',
       },
     ],
@@ -333,7 +343,7 @@ const contentMap = {
 };
 
 const DynamicContent = () => {
-  const [selectedOption, setSelectedOption] = useState('Selecciona una opción');
+  const [selectedOption, setSelectedOption] = useState('Select an option');
   const [leftContent, setLeftContent] = useState([]);
   const [rightContent, setRightContent] = useState([]);
 
