@@ -162,21 +162,25 @@ const contentMap = {
   'Projects': {
     right: [
       {
+        title: 'JustCompress',
+        description:`It's an open-source image compressor that compresses images using different compression algorithms. It's free and unlimited.`,
+        link1: { href: 'https://mrrobot4042212.github.io/JustCompress/', text: 'Website' },
+        link2: { href: 'https://github.com/MrRobot4042212/JustCompress', text: 'Github' }
+      },
+      {
         title: 'La Mirada de Maraboo',
         description: 'The "La Mirada de Maraboo" Association is committed to improving the lives of 100 orphaned children in Tanzania, specifically at the "Msamaria" orphanage in the town of Moshi. Our mission is to provide them with a safe home, access to quality education, medical care, and emotional support, so they can grow and develop in a conducive environment.',
-        link1: { href: 'https://mrrobot4042212.github.io/La_mirada_de_maraboo.github.io/', text: 'Website' },
-        link2: { href: 'https://github.com/MrRobot4042212/la-mirada-de-maraboo-V2', text: 'Github' },
+
       },
       { 
         title: 'PowerPulse',
         description: '"PowerPulse" is a fitness platform that offers tools such as a daily calorie calculator and a personalized meal planner. It also includes varied workout routines and progress tracking, all designed to help you effectively reach your goals. The platform features a variety of tools that cover different aspects of your fitness journey.',
-        link1: { href: 'https://mrrobot4042212.github.io/PowerPulse.github.io/', text: 'Website' },
-        link2: { href: 'https://github.com/MrRobot4042212/PowerPulse.github.io', text: 'Github' },
+
       },
       { 
         title: 'El Hamiti News',
         description: 'El Hamiti News aims at the design, development, and implementation of a news platform specialized in the field of computing and technology. This platforms mission is to provide accurate, timely, and relevant information on the latest developments in the tech industry, including innovations in hardware and software, trends in artificial intelligence, cybersecurity, among others.',
-        link1: { href: '/public/utils/Grupo05_Memoria_ElHamitiNews.pdf', text: 'Report' },
+        link1: { href: '/utils/Grupo05_Memoria_ElHamitiNews.pdf', text: 'Document' },
         link2: { href: 'https://github.com/MrRobot4042212/El-Hamiti-News.github.io', text: 'Github' },
       },
       { 
@@ -187,6 +191,13 @@ const contentMap = {
       },
     ],
     left: [
+      {
+        imagen: "/image/icons/justCompress.webp",
+        description: 'Open-source project for compressing images.',
+        date: "16 / 08 / 2024",
+        alt: 'JustCompress Logo',
+        title: 'JC',
+      },
       {
         imagen: "/image/icons/maraboo.webp",
         description: 'Website project for the non-profit association "La Mirada de Maraboo"',
