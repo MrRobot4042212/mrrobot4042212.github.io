@@ -61,7 +61,9 @@ import Avatar from '../../public/image/avatar-recortado.webp'
 </header>
 
 <style>
-    header{
+
+    @media (max-width: 768px){
+        header{
         display: flex;
         width: 100%;
         background-color: #293b51;
@@ -71,7 +73,147 @@ import Avatar from '../../public/image/avatar-recortado.webp'
         position: relative;
         z-index: 10;
         flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    header::before{
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: ;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: url(/image/avatar-bio-2.webp) fixed no-repeat;
+        background-size: 155vh;
+        background-position-x: right;
+        z-index: -1;
+        animation: backgroundRemover  linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0vh 90vh;
+    }
+
+    header::after{
+        content: "";
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgb(0, 0, 0,0.5);
+        background-size: 100vmax;
+        background-position: center;
+        z-index: -1;
+    }
+    
+    header aside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        height: 100%;
+        width: 100%;
+        animation: flexFix linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0vh 90vh;
+        flex-wrap: wrap;
+        background: transparent;
+    }
+
+    .hd-name{
+        font-family: "Montserrat";
+        color: #4e7ea9;
+        font-weight:700;
+        font-size: 60px;
+        text-align: center;
+
+
+        animation: centerRight linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0vh 90vh;
+    }
+    .hd-tittle{
+        font-family: "Montserrat";
+        color: #a2bdd7;
+        font-weight: 400;
+        max-width: 60rem;
+        font-size: 35px;
+        text-align: center;
+
+        animation: centerLeft linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0vh 90vh;
+    }
+
+    .hd-media-icons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        column-gap: 50px;
+    }
+    
+
+    header #buttons{
+        z-index: 10;
+    }
+
+    header #media{
+        animation: centerRight linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0vh 90vh;
+    }
+    
+    @keyframes backgroundRemover {
+        to{
+            filter: blur(10px) grayscale(100%);
+        }
+    }
+    @keyframes flexFix {
+        to{
+            flex-direction: row;
+        }
+    }
+            #sticky-parallax-header {
+            position: fixed;
+            top: 0;
+
+            animation: sticky-parallax-header-move-and-size linear forwards;
+            animation-timeline: scroll();
+            animation-range: 0vh 90vh;
+        }
+        @keyframes sticky-parallax-header-move-and-size {
+            from {
+                background-position: 50% 0;
+                height: 100vh;
+                font-size: calc(4vw + 1em);
+            }
+            to {
+                background-position: 50% 100%;
+                height: 10vh;
+                font-size: 2em;
+                flex-direction: row;
+            }
+        }
+
+
+        
+    }
+    @media (min-width: 769px){
+        header{
+        display: flex;
+        width: 100%;
+        background-color: #293b51;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
     header::before{
@@ -88,6 +230,9 @@ import Avatar from '../../public/image/avatar-recortado.webp'
         background-size: 100vmax;
         background-position: center;
         z-index: -1;
+        mask-image: linear-gradient(
+                #141d28 80%, trasparent
+        );       
 
         animation: backgroundRemover  linear forwards;
         animation-timeline: scroll();
@@ -197,5 +342,8 @@ import Avatar from '../../public/image/avatar-recortado.webp'
                 flex-direction: row;
             }
         }
+        
+    }
+
 </style>
     

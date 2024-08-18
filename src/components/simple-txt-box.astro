@@ -3,7 +3,10 @@ const { title , parrafo, idBox  } = Astro.props;
 
 ---
 <article id={idBox} class="main-simple-boxes">
-    <h1>{title}</h1>
+    <span>
+        <h1>{title}</h1>
+        <slot name="svg"/>
+    </span>
     <aside>
         <slot name="extraBefore"/>
         <p>{parrafo}</p>
@@ -16,14 +19,23 @@ const { title , parrafo, idBox  } = Astro.props;
         display:flex ;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        padding: 50px ;
+        max-width: 950px;
         background-color: rgba(49, 81, 115, 0.2);
-        padding: 50px 0px;
+        border-radius: 10px;
+        margin-top: 30px;
+        box-shadow: 0px 0px 100px 20px rgb(78, 126, 169,0.5);
     }
-
     aside{
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 30px;
+        flex-wrap: wrap;
+    }
+    span{
+        display: flex;
         align-items: center;
         justify-content: center;
         column-gap: 30px;

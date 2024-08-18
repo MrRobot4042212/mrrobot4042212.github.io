@@ -63,7 +63,7 @@ const contentMap = {
       alt: 'SMA logo',
       title: 'SMA',
     },
-    { imagen: "/image/icons/SAE.webp", 
+    { imagen: "/image/icons/SAE.webp",
       description: 'Madrid, España',
       fecha: "12/09/2016 – 20/06/2017",
       alt: 'SAE logo',
@@ -378,7 +378,7 @@ const DynamicContent = () => {
         <section className="container">
           {leftContent.map((item, index) => (
             <article id={item.title} key={index}>
-              {item.imagen && <img src={item.imagen} alt={item.alt || 'Imagen'} className='imgIcons' />}
+              {item.imagen && <img draggable="false" src={item.imagen} alt={item.alt || 'Imagen'} className='imgIcons' />}
               {rightContent[index] && (
                 <div className="right-column">
                   <h2>{rightContent[index].title}</h2>
