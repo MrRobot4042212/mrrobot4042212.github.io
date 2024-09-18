@@ -6,57 +6,72 @@ import DynamicContent from '../components/dynamicContent.jsx';
 import Image from "astro/components/Image.astro"
 import BioAvatar from '../../public/image/avatar_bio.webp'
 import objetiveAvatar from '../../public/image/avatar.webp'
-
 ---
 
 <Layout title="Alfonso Chicoma - Fullstack developer">
-        <BioArticle
-            idBox="aboutMe"
-            title="About me"
-            parrafo="I am passionate about technology, with a degree in SMR and ASIR. During my training, I gained experience in network computer systems administration, and subsequently, I focused on both front-end and back-end development."
-        >
+    <BioArticle
+        idBox="aboutMe"
+        title="About me"
+        parrafo="I'm passionate about technology, with a background in SMR and ASIR. During my studies, I gained experience in network systems administration, but over time, I found my true calling in front-end development. I've worked with technologies like JavaScript, TypeScript, React.js, and Astro, and I love constantly learning and improving my skills in this area."
+    >
         <Image
-        slot='extraAfter'
-        src={BioAvatar}
-        width="400"
-        height="400"
-        class='bio-avatar bio-avatar-before '
-        alt="Una descripción de mi imagen." 
-        decoding="async"
-        loading="lazy"
-        alt="Una descripción de mi imagen."
-        draggable="false"
+            slot='extraAfter'
+            src={BioAvatar}
+            width="400"
+            height="400"
+            class='bio-avatar bio-avatar-before'
+            alt="Una descripción de mi imagen."
+            decoding="async"
+            loading="lazy"
+            draggable="false"
         />
         <svg
-        slot="svg"
-        class="icon icon-tabler icon-tabler-pencil-heart" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4e7ea9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            slot="svg"
+            class="icon icon-tabler icon-tabler-pencil-heart"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#4e7ea9"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M17 11l1.5 -1.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4h4l2 -2" />
             <path d="M13.5 6.5l4 4" />
             <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" />
         </svg>
-        </BioArticle>
+    </BioArticle>
 
-        <BioArticle
+    <BioArticle
         idBox="objetive"
         title="Objetive"
         parrafo="My goal is to delve deeper into the various front-end development languages while continuing to expand my knowledge in back-end languages. I want to understand the fundamentals of both and then refine my skills in each. Additionally, I have a strong ability to understand and adapt to client needs, always keeping up to date with the latest trends and best practices in the industry."
-        >
+    >
         <Image
-        slot='extraBefore'
-        src={objetiveAvatar}
-        width="400"
-        height="400"
-        class='bio-avatar'
-        alt="Una descripción de mi imagen." 
-        decoding="async"
-        loading="lazy"
-        alt="Una descripción de mi imagen."
-        draggable="false"
+            slot='extraBefore'
+            src={objetiveAvatar}
+            width="400"
+            height="400"
+            class='bio-avatar'
+            alt="Una descripción de mi imagen."
+            decoding="async"
+            loading="lazy"
+            draggable="false"
         />
-
         <svg
-        slot="svg" class="icon icon-tabler icon-tabler-target-arrow" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4e7ea9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            slot="svg"
+            class="icon icon-tabler icon-tabler-target-arrow"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#4e7ea9"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
             <path d="M12 7a5 5 0 1 0 5 5" />
@@ -64,16 +79,13 @@ import objetiveAvatar from '../../public/image/avatar.webp'
             <path d="M15 6v3h3l3 -3h-3v-3z" />
             <path d="M15 9l-3 3" />
         </svg>
-        </BioArticle>
-        
-
+    </BioArticle>
 
     <DynamicContent client:visible />
-
 </Layout>
 
 <style>
-    .main-content{
+    .main-content {
         height: 100%;
         row-gap: 30px;
         display: flex;
@@ -83,7 +95,7 @@ import objetiveAvatar from '../../public/image/avatar.webp'
         align-content: center;
         flex-wrap: wrap;
     }
-    nav{
+    nav {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -92,10 +104,15 @@ import objetiveAvatar from '../../public/image/avatar.webp'
         flex-wrap: wrap;
         width: 100%;
     }
-    .bio-avatar{
+    .bio-avatar {
         border-radius: 50%;
+        view-timeline-name: --revealing-image;
+        view-timeline-axis: block;
+        animation: linear reveal both;
+        animation-timeline: --revealing-image;
+        animation-range: entry 25% cover 40%;
     }
-    .cronological-content{
+    .cronological-content {
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -105,23 +122,14 @@ import objetiveAvatar from '../../public/image/avatar.webp'
         flex-wrap: wrap;
         position: relative;
     }
-    .cronological-content div{
+    .cronological-content div {
         display: flex;
-        flex-direction: column
+        flex-direction: column;
     }
-    img{
+    img {
         object-fit: cover;
     }
-    .bio-avatar{
-        view-timeline-name: --revealing-image;
-        view-timeline-axis: block;
-
-        animation: linear reveal both;
-        animation-timeline: --revealing-image;
-
-        animation-range: entry 25% cover 40%; 
-    }
-        @keyframes reveal {
+    @keyframes reveal {
         from {
             opacity: 0;
             clip-path: inset(80% 20% 45% 20%);
@@ -129,7 +137,6 @@ import objetiveAvatar from '../../public/image/avatar.webp'
         to {
             opacity: 1;
             clip-path: inset(0% 0% 0% 0%);
-
         }
     }
 </style>

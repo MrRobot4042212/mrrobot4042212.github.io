@@ -1,7 +1,7 @@
 ---
-const { title , parrafo, idBox  } = Astro.props;
-
+const { title, parrafo, idBox } = Astro.props;
 ---
+
 <article id={idBox} class="main-simple-boxes">
     <span>
         <h1>{title}</h1>
@@ -15,28 +15,29 @@ const { title , parrafo, idBox  } = Astro.props;
 </article>
 
 <style>
-
-    @media (max-width: 768px){
-        .main-simple-boxes{
-        display:flex ;
+    .main-simple-boxes {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 50px 0px;
+        padding: 50px;
         max-width: 950px;
         background-color: rgba(49, 81, 115, 0.2);
         border-radius: 10px;
         margin-top: 30px;
-        box-shadow: 0px 0px 100px 20px rgb(78, 126, 169,0.5);
+        box-shadow: 0px 0px 100px 20px rgb(78, 126, 169, 0.5);
     }
-    aside{
+
+    aside {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         column-gap: 30px;
         flex-wrap: wrap;
+        width: 100%;
     }
-    span{
+
+    span {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -44,7 +45,7 @@ const { title , parrafo, idBox  } = Astro.props;
         flex-wrap: wrap;
     }
 
-    aside *{
+    aside * {
         margin: 10px;
     }
 
@@ -52,111 +53,41 @@ const { title , parrafo, idBox  } = Astro.props;
         background: none;
     }
 
-    h1{
-        color:#4e7ea9;
+    h1 {
+        color: #4e7ea9;
         font-size: 40px;
     }
-    p{
-        color:#cedce9 ;
-        font-size: 22px;
-        text-wrap: pretty;
-        max-width: 1000px;
-        text-align: start;
 
+    p {
+        color: #cedce9;
+        font-size: 22px;
+        text-align: start;
+    
+        
 
         view-timeline-name: --revealing-txt;
         view-timeline-axis: block;
 
-        animation: linear popUp   both;
+        animation: linear reveal both;
         animation-timeline: --revealing-txt;
 
-        animation-range: entry 25% cover 50%; 
+        animation-range: entry 15% cover 25%; 
     }
 
-    @keyframes popUp {
+    @keyframes reveal {
         from {
             opacity: 0;
-            transform: scale(0.1);
         }
-        to {
+        to{
             opacity: 1;
-            transform: scale(1);
-
         }
     }
 
-        
-    }
-    @media (min-width: 768px){
-        
-        .main-simple-boxes{
-        display:flex ;
-        flex-direction: column;
-        align-items: center;
-        padding: 50px ;
-        max-width: 950px;
-        background-color: rgba(49, 81, 115, 0.2);
-        border-radius: 10px;
-        margin-top: 30px;
-        box-shadow: 0px 0px 100px 20px rgb(78, 126, 169,0.5);
-    }
-    aside{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        column-gap: 30px;
-        flex-wrap: wrap;
-    }
-    span{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        column-gap: 30px;
-        flex-wrap: wrap;
-    }
-
-    aside *{
-        margin: 10px;
-    }
-
-    #objetive {
-        background: none;
-    }
-
-    h1{
-        color:#4e7ea9;
-        font-size: 40px;
-    }
-    p{
-        color:#cedce9 ;
-        font-size: 22px;
-        text-wrap: pretty;
-        max-width: 1000px;
-        text-align: start;
 
 
-        view-timeline-name: --revealing-txt;
-        view-timeline-axis: block;
-
-        animation: linear popUp   both;
-        animation-timeline: --revealing-txt;
-
-        animation-range: entry 25% cover 50%; 
-    }
-
-    @keyframes popUp {
-        from {
-            opacity: 0;
-            transform: scale(0.1);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-
+    @media (max-width: 768px) {
+        .main-simple-boxes {
+            padding: 50px 0px;
         }
     }
-        
-    }
-
 </style>

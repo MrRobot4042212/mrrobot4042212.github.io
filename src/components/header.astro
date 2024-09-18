@@ -1,140 +1,123 @@
 ---
 import Icons from "./icons.astro"
-import Image from "astro/components/Image.astro"
 import Buttons from './buttons.astro'
-import Avatar from '../../public/image/avatar-recortado.webp'
 ---
+
 <header id="sticky-parallax-header">    
-            <nav id="buttons" class="hd-media-icons">
-                <Buttons
-                classProp="buttonNormal"
-                name="Home"
-                link="#root"
-                />
-                <Buttons
-                classProp="buttonNormal "
-                name="About me"
-                link="#aboutMe"/>
-                <Buttons
-                classProp="buttonNormal"
-                name="Experience"
-                link="#main-content"
-                />
-            </nav>
-        <h1 class="hd-name"> 
-            <span class="first-name">Diego Alfonso </span>
-            <span class="last-name">Chicoma Ibañez</span>
-        </h1>
-        <h2 class="hd-tittle">Junior Full-stack developer</h2>
-        <nav id="media" class="hd-media-icons">
-            <Icons
-                url='https://github.com/MrRobot4042212',
-                socialName="GitHub",
-            >
-                <svg
-                    slot="hd-svg"
-                    width="50" height="50" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-GithubFill"><g clip-path="url(#clip0_100_4)"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></g><defs><clipPath id="clip0_100_4"><rect width="24" height="24"/></clipPath></defs>
-                </svg>
-            </Icons>
-            <Icons
-                url='https://www.linkedin.com/in/diego-alfonso-chicoma-ibañez-5721ba228/',
-                socialName='Linkedin'
-            >
-                <svg
-                    slot="hd-svg"
-                    xmlns="http://www.w3.org/2000/svg" 
-                    width="50" height="50" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-LinkedinBoxFill"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634 3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388zm-5.5 10.403h3.208V9.25H4.208v10.54zM7.875 5.812a2.063 2.063 0 1 1-4.125 0 2.063 2.063 0 0 1 4.125 0z"/>
-                </svg>
-            </Icons>
-            <Icons
-                url='utils/CV_ES.pdf', 
-                socialName='CV',
-                Download='DiegoAlfonso-ChicomaIbañez-CV'
-            >
-            <svg
-                slot="hd-svg"
-                xmlns="http://www.w3.org/2000/svg"
-                width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Download"><path d="M12 15V3m0 12l-4-4m4 4l4-4"/><path d="M2 17l.621 2.485A2 2 0 0 0 4.561 21H19.439a2 2 0 0 0 1.94-1.515L22 17"/>
+    <nav id="buttons" class="hd-media-icons">
+        <Buttons classProp="buttonNormal" name="Home" link="#root" />
+        <Buttons classProp="buttonNormal" name="About me" link="#aboutMe" />
+        <Buttons classProp="buttonNormal" name="Experience" link="#main-content" />
+    </nav>
+    <nav class="navHamburger" role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+    
+            <ul id="menu">
+                <Buttons classProp="buttonNormal" name="Home" link="#root" />
+                <Buttons classProp="buttonNormal" name="About me" link="#aboutMe" />
+                <Buttons classProp="buttonNormal" name="Experience" link="#main-content" />
+            </ul>
+        </div>
+    </nav>
+    <h1 class="hd-name"> 
+        <span class="first-name">Diego Alfonso </span>
+        <span class="last-name">Chicoma Ibañez</span>
+    </h1>
+    <h2 class="hd-tittle">Junior Front-End Developer</h2>
+    <nav id="media" class="hd-media-icons">
+        <Icons url='https://github.com/MrRobot4042212' socialName="GitHub">
+            <svg slot="hd-svg" width="50" height="50" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-GithubFill">
+                <g clip-path="url(#clip0_100_4)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_100_4">
+                        <rect width="24" height="24"/>
+                    </clipPath>
+                </defs>
             </svg>
-            </Icons>    
-        </nav>
+        </Icons>
+        <Icons url='https://www.linkedin.com/in/diego-alfonso-chicoma-ibañez-5721ba228/' socialName='Linkedin'>
+            <svg slot="hd-svg" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-LinkedinBoxFill">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634 3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388zm-5.5 10.403h3.208V9.25H4.208v10.54zM7.875 5.812a2.063 2.063 0 1 1-4.125 0 2.063 2.063 0 0 1 4.125 0z"/>
+            </svg>
+        </Icons>
+        <Icons url='utils/CV_ES.pdf' socialName='CV' Download='DiegoAlfonso-ChicomaIbañez-CV'>
+            <svg slot="hd-svg" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Download">
+                <path d="M12 15V3m0 12l-4-4m4 4l4-4"/>
+                <path d="M2 17l.621 2.485A2 2 0 0 0 4.561 21H19.439a2 2 0 0 0 1.94-1.515L22 17"/>
+            </svg>
+        </Icons>    
+    </nav>
 </header>
 
 <style>
-
-    @media (max-width: 768px){
-        header{
+    header {
         display: flex;
-        width: 100%;
         background-color: #293b51;
         flex-wrap: wrap;
         align-content: center;
         align-items: center;
-        position: relative;
         z-index: 10;
         flex-direction: column;
         justify-content: space-evenly;
+        
     }
 
-    header::before{
+    header::before {
         content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
         top: 0;
-        bottom: 0;
         left: 0;
-        right: 0;
-        padding: ;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: url(/image/avatar-bio-2.webp) fixed no-repeat;
-        background-size: 155vh;
-        background-position-x: right;
         z-index: -1;
-        animation: backgroundRemover  linear forwards;
-        animation-timeline: scroll();
-        animation-range: 0vh 90vh;
+        background: url(/image/avatar-bio-2.webp) center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
     }
 
-    header::after{
+    header::after {
         content: "";
         top: 0;
         bottom: 0;
         width: 100%;
         height: 100%;
         position: absolute;
-        background-color: rgb(0, 0, 0,0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         background-size: 100vmax;
         background-position: center;
         z-index: -1;
     }
-    
-    header aside{
+
+    header aside {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100%;
         width: 100%;
-        animation: flexFix linear forwards;
-        animation-timeline: scroll();
-        animation-range: 0vh 90vh;
+
         flex-wrap: wrap;
         background: transparent;
     }
 
-    .hd-name{
+    .hd-name {
         font-family: "Montserrat";
         color: #4e7ea9;
-        font-weight:700;
+        font-weight: 700;
         font-size: 60px;
         text-align: center;
 
-
-        animation: centerRight linear forwards;
-        animation-timeline: scroll();
-        animation-range: 0vh 90vh;
     }
-    .hd-tittle{
+
+    .hd-tittle {
         font-family: "Montserrat";
         color: #a2bdd7;
         font-weight: 400;
@@ -142,12 +125,10 @@ import Avatar from '../../public/image/avatar-recortado.webp'
         font-size: 35px;
         text-align: center;
 
-        animation: centerLeft linear forwards;
-        animation-timeline: scroll();
-        animation-range: 0vh 90vh;
+
     }
 
-    .hd-media-icons{
+    .hd-media-icons {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -155,195 +136,219 @@ import Avatar from '../../public/image/avatar-recortado.webp'
         justify-content: center;
         column-gap: 50px;
     }
-    
 
-    header #buttons{
+    header #buttons {
         z-index: 10;
     }
 
-    header #media{
+
+
+
+
+    @media (max-width: 768px) {
+        header{
+            position: relative;
+            height: 100vh;
+        }
+        
+        header::before {
+            background-position-x:75%;
+        }
+
+        #buttons{
+            display: none;
+        }
+    .navHamburger{
+    position: fixed;
+    margin: 30px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    }
+    #menuToggle
+    {
+        display: block;
+        position: relative;
+        z-index: 10; 
+        -webkit-user-select: none;
+        user-select: none;
+        bottom: 0;
+        top: 0;
+    }
+    #menuToggle a
+    {
+        text-decoration: none;
+        color: rgb(255, 255, 255,0.7);
+        transition: color 0.3s ease;
+    }
+    
+    #menuToggle a:hover
+    {
+        color: rgb(242, 102, 41);
+        text-decoration:line-through;
+        scale: 1.05;
+        transition: all 0.5s ease;
+        
+    
+    }
+    
+    #menuToggle input
+    {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2; 
+        -webkit-touch-callout: none;
+    }
+    #menuToggle span
+    {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #cdcdcd;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+    }
+    
+    #menuToggle span:first-child
+    {
+        transform-origin: 0% 0%;
+    }
+    
+    #menuToggle span:nth-last-child(2)
+    {
+        transform-origin: 0% 100%;
+    }
+    #menuToggle input:checked ~ span
+    {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #cdcdcd;
+    }
+    #menuToggle input:checked ~ span:nth-last-child(3)
+    {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    
+    #menuToggle input:checked ~ span:nth-last-child(2)
+    {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+    #menu
+    {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 100%;
+        margin: -100px 0 0 -50px;
+        padding: 150px 50px;
+        background: rgb(41, 59, 81,0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        border: 2px rgb(128, 128, 128,0.6) solid;
+    }
+    #menu li
+    {
+        padding: 10px;
+        font-size: 30px;
+    }
+    
+    #menuToggle input:checked ~ ul
+    {
+        transform: none;
+    }
+    }
+
+    @media (min-width: 769px) {
+
+        header{
+            width: 100%;
+        }
+
+        header::before{
+        animation: backgroundRemover linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0vh 90vh;
+        }
+
+        header aside {
+        animation: flexFix linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0vh 90vh;
+        }
+
+        @keyframes backgroundRemover {
+        to {
+            filter: blur(10px) grayscale(100%);
+        }
+    }
+
+    @keyframes flexFix {
+        to {
+            flex-direction: row;
+        }
+    }
+
+    #sticky-parallax-header {
+        position: fixed;
+        top: 0;
+        animation: sticky-parallax-header-move-and-size linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0vh 90vh;
+    }
+
+    @keyframes sticky-parallax-header-move-and-size {
+        from {
+            background-position: 50% 0;
+            height: 100vh;
+            font-size: calc(4vw + 1em);
+        }
+        to {
+            background-position: 50% 100%;
+            height: 10vh;
+            font-size: 2em;
+            flex-direction: row;
+        }
+    }
+
+    header #media {
         animation: centerRight linear forwards;
         animation-timeline: scroll();
         animation-range: 0vh 90vh;
     }
-    
-    @keyframes backgroundRemover {
-        to{
-            filter: blur(10px) grayscale(100%);
-        }
-    }
-    @keyframes flexFix {
-        to{
-            flex-direction: row;
-        }
-    }
-            #sticky-parallax-header {
-            position: fixed;
-            top: 0;
-
-            animation: sticky-parallax-header-move-and-size linear forwards;
-            animation-timeline: scroll();
-            animation-range: 0vh 90vh;
-        }
-        @keyframes sticky-parallax-header-move-and-size {
-            from {
-                background-position: 50% 0;
-                height: 100vh;
-                font-size: calc(4vw + 1em);
-            }
-            to {
-                background-position: 50% 100%;
-                height: 10vh;
-                font-size: 2em;
-                flex-direction: row;
-            }
-        }
-
-
-        
-    }
-    @media (min-width: 769px){
-        header{
-        display: flex;
-        width: 100%;
-        background-color: #293b51;
-        flex-wrap: wrap;
-        align-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 10;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    header::before{
-        content: "";
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: ;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: url(/image/avatar-bio-2.webp) fixed no-repeat;
-        background-size: 100vmax;
-        background-position: center;
-        z-index: -1;
-        mask-image: linear-gradient(
-                #141d28 80%, trasparent
-        );       
-
-        animation: backgroundRemover  linear forwards;
-        animation-timeline: scroll();
-        animation-range: 0vh 90vh;
-    }
-
-    header::after{
-        content: "";
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-color: rgb(0, 0, 0,0.5);
-        background-size: 100vmax;
-        background-position: center;
-        z-index: -1;
-    }
-    
-    header aside{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-        animation: flexFix linear forwards;
-        animation-timeline: scroll();
-        animation-range: 0vh 90vh;
-        flex-wrap: wrap;
-        background: transparent;
-    }
-
     .hd-name{
-        font-family: "Montserrat";
-        color: #4e7ea9;
-        font-weight:700;
-        font-size: 60px;
-        text-align: center;
-
-
+        
         animation: centerRight linear forwards;
         animation-timeline: scroll();
         animation-range: 0vh 90vh;
     }
     .hd-tittle{
-        font-family: "Montserrat";
-        color: #a2bdd7;
-        font-weight: 400;
-        max-width: 60rem;
-        font-size: 35px;
-        text-align: center;
-
-        animation: centerLeft linear forwards;
-        animation-timeline: scroll();
-        animation-range: 0vh 90vh;
-    }
-
-    .hd-media-icons{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        justify-content: center;
-        column-gap: 50px;
-    }
-    
-
-    header #buttons{
-        z-index: 10;
-    }
-
-    header #media{
         animation: centerRight linear forwards;
         animation-timeline: scroll();
         animation-range: 0vh 90vh;
+
+    }
+
+    .navHamburger{
+        display: none;
     }
     
-    @keyframes backgroundRemover {
-        to{
-            filter: blur(10px) grayscale(100%);
-        }
-    }
-    @keyframes flexFix {
-        to{
-            flex-direction: row;
-        }
-    }
-            #sticky-parallax-header {
-            position: fixed;
-            top: 0;
-
-            animation: sticky-parallax-header-move-and-size linear forwards;
-            animation-timeline: scroll();
-            animation-range: 0vh 90vh;
-        }
-        @keyframes sticky-parallax-header-move-and-size {
-            from {
-                background-position: 50% 0;
-                height: 100vh;
-                font-size: calc(4vw + 1em);
-            }
-            to {
-                background-position: 50% 100%;
-                height: 10vh;
-                font-size: 2em;
-                flex-direction: row;
-            }
-        }
-        
-    }
-
 </style>
-    
