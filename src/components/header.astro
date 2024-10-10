@@ -135,6 +135,7 @@ import Buttons from './buttons.astro'
         width: 100%;
         justify-content: center;
         column-gap: 50px;
+        z-index: 2;
     }
 
     header #buttons {
@@ -252,10 +253,10 @@ import Buttons from './buttons.astro'
         display: flex;
         flex-direction: column;
         position: absolute;
-        height: 100%;
+        height: 100vh;
         margin: -100px 0 0 -50px;
         padding: 150px 50px;
-        background: rgb(41, 59, 81,0.6);
+        background: rgb(41, 59, 81, 0.6);
         backdrop-filter: blur(10px);
         border-radius: 8px;
         list-style-type: none;
@@ -263,7 +264,8 @@ import Buttons from './buttons.astro'
         transform-origin: 0% 0%;
         transform: translate(-100%, 0);
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-        border: 2px rgb(128, 128, 128,0.6) solid;
+        border: 2px rgb(128, 128, 128, 0.6) solid;
+        justify-content: flex-start;
     }
     #menu li
     {
@@ -339,11 +341,15 @@ import Buttons from './buttons.astro'
         animation: centerRight linear forwards;
         animation-timeline: scroll();
         animation-range: 0vh 90vh;
+        width: 100%;
+    
     }
     .hd-tittle{
         animation: centerRight linear forwards;
         animation-timeline: scroll();
         animation-range: 0vh 90vh;
+        width: 100%;
+
 
     }
 
