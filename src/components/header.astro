@@ -27,7 +27,7 @@ import Buttons from './buttons.astro'
         <span class="first-name">Diego Alfonso </span>
         <span class="last-name">Chicoma Ibañez</span>
     </h1>
-    <h2 class="hd-tittle">Junior Front-End Developer</h2>
+    <h2 class="hd-tittle">Infraestructure engineer | Front-end Developer</h2>
     <nav id="media" class="hd-media-icons">
         <Icons url='https://github.com/MrRobot4042212' socialName="GitHub">
             <svg slot="hd-svg" width="50" height="50" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-GithubFill">
@@ -58,14 +58,14 @@ import Buttons from './buttons.astro'
 <style>
     header {
         display: flex;
-        background-color: #293b51;
         flex-wrap: wrap;
         align-content: center;
         align-items: center;
         z-index: 10;
         flex-direction: column;
         justify-content: space-evenly;
-        
+        transition: transform 0.3s ease-in-out;
+
     }
 
     header::before {
@@ -109,17 +109,15 @@ import Buttons from './buttons.astro'
     }
 
     .hd-name {
-        font-family: "Montserrat";
         color: #4e7ea9;
-        font-weight: 700;
+        font-weight: bold;
         font-size: 60px;
         text-align: center;
 
     }
 
     .hd-tittle {
-        font-family: "Montserrat";
-        color: #a2bdd7;
+        color: var(--text);
         font-weight: 400;
         max-width: 60rem;
         font-size: 35px;
@@ -137,14 +135,13 @@ import Buttons from './buttons.astro'
         column-gap: 50px;
         z-index: 2;
     }
+    .hidden {
+        transform: translateY(-100%);
+    }
 
     header #buttons {
         z-index: 10;
     }
-
-
-
-
 
     @media (max-width: 768px) {
         header{
@@ -359,3 +356,31 @@ import Buttons from './buttons.astro'
 }
     
 </style>
+
+<script>
+    let lastScrollTop = 0;
+    const header = document.getElementById('sticky-parallax-header');
+    function handleScroll() {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            header.classList.add('hidden');
+        } else {
+            header.classList.remove('hidden');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+
+        if (scrollTop === 0) {
+            window.removeEventListener('scroll', handleScroll);
+            header.addEventListener('animationend', handleAnimationEnd);
+        }
+    }
+
+    function handleAnimationEnd(event) {
+        if (event.animationName === 'sticky-parallax-header-move-and-size') {
+            window.addEventListener('scroll', handleScroll);
+            header.removeEventListener('animationend', handleAnimationEnd);
+        }
+    }
+
+    header.addEventListener('animationend', handleAnimationEnd);
+</script>

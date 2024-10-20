@@ -4,27 +4,32 @@ const { title, parrafo, idBox } = Astro.props;
 
 <article id={idBox} class="main-simple-boxes">
     <span>
-        <h1>{title}</h1>
         <slot name="svg"/>
+        <h1>{title}</h1>
     </span>
     <aside>
-        <slot name="extraBefore"/>
         <p>{parrafo}</p>
-        <slot name="extraAfter"/>
     </aside>
 </article>
 
 <style>
+
+    @media (max-width: 768px) {
+        span{
+            flex-direction: column;
+            row-gap: 30px;
+        }
+        
+    }
     .main-simple-boxes {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 50px;
         max-width: 950px;
-        background-color: rgba(49, 81, 115, 0.2);
         border-radius: 10px;
         margin-top: 30px;
-        box-shadow: 0px 0px 100px 20px rgb(78, 126, 169, 0.5);
+        border: #fff solid 2px;
     }
 
     aside {
@@ -43,6 +48,7 @@ const { title, parrafo, idBox } = Astro.props;
         justify-content: center;
         column-gap: 30px;
         flex-wrap: wrap;
+        width: fit-content
     }
 
     aside * {
@@ -54,12 +60,17 @@ const { title, parrafo, idBox } = Astro.props;
     }
 
     h1 {
-        color: #4e7ea9;
+        color: var(--title);
         font-size: 40px;
+        overflow: hidden;
+        border-right: .1em solid #fff;
+        white-space: nowrap;
+        padding-right: 10px;
+        animation: blink-caret 1s step-end infinite;
     }
 
     p {
-        color: #cedce9;
+        color: var(--text);
         font-size: 22px;
         text-align: start;
     
@@ -83,11 +94,8 @@ const { title, parrafo, idBox } = Astro.props;
         }
     }
 
-
-
-    @media (max-width: 768px) {
-        .main-simple-boxes {
-            padding: 50px 0px;
-        }
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: #fff; }
     }
 </style>

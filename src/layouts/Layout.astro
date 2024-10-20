@@ -33,6 +33,21 @@ const { title } = Astro.props;
     </body>
 </html>
 <style is:global>
+    @font-face {
+	font-family: 'Satoshi-Variable';
+	src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
+        url('../fonts/Satoshi-Variable.woff') format('woff'),
+        url('../fonts/Satoshi-Variable.ttf') format('truetype');
+	font-weight: 300 900;
+	font-display: swap;
+	font-style: normal;
+}
+    :root{
+        --background:#121212;
+        --alterBackground:#10100e;
+        --title:#4e7ea9;
+        --text:#f6f6f6;
+    }
     @media (max-width: 768px) {
         body {
             padding-top: 0;
@@ -48,11 +63,11 @@ const { title } = Astro.props;
     }
     html {
         scroll-behavior: smooth;
+        font-family: "Satoshi-variable";
     }
     body {
-        font-family: 'Montserrat';
         position: relative;
-        background-color: #101720;
+        background-color: var(--background);
         display: flex;
         flex-direction: column;
         row-gap: 50px;
@@ -66,8 +81,27 @@ const { title } = Astro.props;
         align-items: center;
         justify-content: space-around;
         row-gap: 50px;
-        backdrop-filter: blur(10px);
+        position: relative;
+        background-color: var(--background);
+        z-index: 1;
     }
+    main::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('/image/163.jpg') no-repeat center ;
+        background-size: cover;
+        opacity: 0.1;
+        filter: blur(5px);
+        z-index: -1;
+
+    }
+
+
+    
     .cronological-content {
         display: flex;
         flex-direction: column;
@@ -91,7 +125,7 @@ const { title } = Astro.props;
     }
     .cronological-content a:hover {
         transform: scale(1.05);
-        background-color: #4e7ea9;
+        background-color: var(--text);
     }
     #sublinks-content {
         display: flex;
@@ -101,7 +135,7 @@ const { title } = Astro.props;
         align-content: center;
     }
     .cronological-content h1 {
-        color: #4e7ea9;
+        color: var(--title);
         font-size: 40px;
         text-align: center;
     }
@@ -127,7 +161,7 @@ const { title } = Astro.props;
         align-items: center;
         width: 100%;
         padding: 100px 0;
-        background-color: #172231;
+        background-color: var(--alterBackground);
     }
     .main-content nav {
         display: flex;
@@ -140,7 +174,6 @@ const { title } = Astro.props;
         width: 100%;
     }
     .main-content nav * {
-        font-family: 'Montserrat';
         color: #fff;
         font-size: 15px;
     }
@@ -162,13 +195,13 @@ const { title } = Astro.props;
         width: 100%;
     }
     .container h2 {
-        color: #4e7ea9;
+        color: var(--title);
         max-width: 700px;
         margin: 0;
         font-size: 30px;
     }
     .container p {
-        color: #cedce9;
+        color: var(--text);
         max-width: 700px;
         font-size: 20px;
     }
@@ -189,51 +222,38 @@ const { title } = Astro.props;
     .main-content button {
         background: transparent;
         border-radius: 10px;
+        font-size: 16px;
         padding: 5px;
         border: 2px #4e7ea9 solid;
         cursor: pointer;
-        transition: all 0.3s linear;
+        transition: all 0.5s linear;
         max-width: 200px;
         margin-right: 5px;
     }
     .main-content button:hover {
         transform: scale(1.05);
-        background-color: #4e7ea9;
+        color: #4e7ea9;
+        border: none;
     }
-    @keyframes centerLeft {
-        from {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0.2;
-        }
-        95% {
-            width: fit-content;
-            height: fit-content;
-            transform: translateX(-1200px);
-        }
-        100% {
-            width: 0;
-            height: 0;
-            opacity: 0;
-        }
+    .main-content button:active {
+        border: none;
     }
+
     @keyframes centerRight {
         from {
             opacity: 1;
-        }
-        50% {
-            opacity: 0.2;
-        }
-        95% {
             width: fit-content;
             height: fit-content;
-            transform: translateX(1200px);
         }
-        100% {
+        40% {
+            opacity: 0;
+        }
+        to {
             width: 0;
             height: 0;
             opacity: 0;
+            transform: translateY(-500px);
+
         }
     }
     #Indra::before {
