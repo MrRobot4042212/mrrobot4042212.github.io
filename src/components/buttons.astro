@@ -27,19 +27,18 @@ const { name, link, classProp } = Astro.props;
 
     .buttonNormal{
         background: transparent;
-        border-radius: 10px;
-        padding: 5px;
+        padding: 10px;
         cursor: pointer;
         transition: all 0.3s linear;
         max-width: 150px;
         margin-right: 5px;
         border: 0;
         font-size: 20px;
+        height: fit-content;
     }
     
     button:hover   {
-        transform: scale(1.03);
-        color:#4e7ea9 ;
+        border: var(--text) solid 1px;
     }
     a{
         text-decoration: none;

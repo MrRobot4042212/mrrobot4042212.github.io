@@ -90,7 +90,7 @@ import Buttons from './buttons.astro'
         width: 100%;
         height: 100%;
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.6);
         background-size: 100vmax;
         background-position: center;
         z-index: -1;
@@ -109,23 +109,20 @@ import Buttons from './buttons.astro'
     }
 
     .hd-name {
-        color: #4e7ea9;
+        color: var(--title);
         font-weight: bold;
         font-size: 60px;
         text-align: center;
-
     }
 
     .hd-tittle {
         color: var(--text);
+        opacity: 0.7;
         font-weight: 400;
         max-width: 60rem;
         font-size: 35px;
         text-align: center;
-
-
     }
-
     .hd-media-icons {
         display: flex;
         flex-direction: row;
@@ -134,6 +131,7 @@ import Buttons from './buttons.astro'
         justify-content: center;
         column-gap: 50px;
         z-index: 2;
+        height: 100px;
     }
     .hidden {
         transform: translateY(-100%);
@@ -176,7 +174,7 @@ import Buttons from './buttons.astro'
     #menuToggle a
     {
         text-decoration: none;
-        color: rgb(255, 255, 255,0.7);
+        color: var(--text);
         transition: color 0.3s ease;
     }
     
@@ -210,7 +208,7 @@ import Buttons from './buttons.astro'
         height: 4px;
         margin-bottom: 5px;
         position: relative;
-        background: #cdcdcd;
+        background: var(--text);
         border-radius: 3px;
         z-index: 1;
         transform-origin: 4px 0px;
@@ -233,7 +231,7 @@ import Buttons from './buttons.astro'
     {
         opacity: 1;
         transform: rotate(45deg) translate(-2px, -1px);
-        background: #cdcdcd;
+        background: var(--text);
     }
     #menuToggle input:checked ~ span:nth-last-child(3)
     {
@@ -253,7 +251,7 @@ import Buttons from './buttons.astro'
         height: 100vh;
         margin: -100px 0 0 -50px;
         padding: 150px 50px;
-        background: rgb(41, 59, 81, 0.6);
+        background: var(--background);
         backdrop-filter: blur(10px);
         border-radius: 8px;
         list-style-type: none;
