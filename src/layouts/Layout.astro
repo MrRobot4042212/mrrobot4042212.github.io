@@ -29,7 +29,6 @@ const { title } = Astro.props;
             <slot name="before"/>
             <slot/>
         </main>
-        <Footer/>
     </body>
 </html>
 <style is:global>
@@ -45,32 +44,26 @@ const { title } = Astro.props;
     :root{
         --background:#121212;
         --alterBackground:#10100e;
-        --title:#ffffe3;
+        --title:#8e8964;
         --text:#f6f6f6;
-    }
-    @media (max-width: 768px) {
-        body {
-            padding-top: 0;
-        }
-    }
-    @media (min-width: 769px) {
-        body {
-            padding-top: 100vh;
-        }
     }
     html {
         scroll-behavior: smooth;
         font-family: "Satoshi-variable";
     }
     body {
-        position: relative;
-        background-color: var(--background);
-        display: flex;
-        flex-direction: column;
-        row-gap: 50px;
-        margin: 0;
+    position: relative;
+    background-color: var(--background);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 50px;
+    margin: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
     }
     main {
+        flex: 1;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -238,24 +231,6 @@ const { title } = Astro.props;
     }
     .main-content button:active {
         border: none;
-    }
-
-    @keyframes centerRight {
-        from {
-            opacity: 1;
-            width: fit-content;
-            height: fit-content;
-        }
-        40% {
-            opacity: 0;
-        }
-        to {
-            width: 0;
-            height: 0;
-            opacity: 0;
-            transform: translateY(-500px);
-
-        }
     }
     #Indra::before {
         background: linear-gradient(to bottom, #fff, #12436d);
