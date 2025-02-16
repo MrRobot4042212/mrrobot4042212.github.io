@@ -4,27 +4,42 @@ const contentMap = {
   'Work experience': {
     right: [
       {
-        title: 'INDRA Sistemas | ATM Sytems',
+        title: 'GEOPOST S.L ',
+        subtitle:'Infrastructure Engineer || Front-end Developer',
+        description: 'I am in charge of the installation and maintenance of the company’s infrastructure, as well as the development of the front-end of the company’s website. Additionally, I have carried out process automation projects and developed microservices, certificate automation, and an alerting system. I also manage the infrastructure on platforms such as OpenShift, Azure, OCI, and PKS.Furthermore, I am responsible for administering Jira, overseeing platform maintenance, and creating automation workflows to optimize operations.',
+        description2: 'I also have experience in front-end development, having built a corporate application called GEDDIS using Angular 19, Ionic, and Capacitor for mobile development. This application integrates with our APIs to manage and monitor services, generate real-time analytics and visualizations, and track operations within our Jira system, allowing efficient control of projects and tickets.'
+      },
+      {
+        title: 'INDRA Sistemas',
+        subtitle:'ATM Systems Technician',
         description: 'Assisted in the installation of different subsystems related to ATMs, carried out the installation of INDRAs proprietary software on various devices while also helping to create the database (PostgreSQL).',
         description2: 'We had a return of a string (Set of devices) from a course, so we had to perform the installation from scratch of an entire string for different projects at the same time, we acted immediately with the coordination and physical structuring of the devices, then we created different groups to perform a synchronized work with the installation of each project, each project required a database, the proprietary system and the creation of scripts for an automation of the installation, the result was successful so the entire string was installed within the established deadline to work on it.'
       },
       {
-        title: 'Infibail Ibérica | IT technician',
+        title: 'Infibail Ibérica',
+        subtitle:'IT Technician',
         description: 'I was in charge of the companys systems administration along with a specialized team for this purpose, maintenance and repair of computer equipment, and preparation of orders.',
         description2: 'When we worked at the company, we had to repair a piece of computer equipment that was not working correctly. After many hours of searching and solving, we managed to completely resolve the problem. After diagnosing the issue, we found that the problem was an electrical current issue in the equipments case.'
       }
     ],
     left: [
       {
+        imagen: "/image/icons/LogoGeopost.webp",
+        description: 'Madrid, Spain',
+        fecha: "07/09/2024 – Now",
+        alt: 'Geopost Logo',
+        title: 'Geopost',
+      },
+      {
         imagen: "/image/icons/indra.webp",
-        description: 'Madrid, España',
+        description: 'Madrid, Spain',
         fecha: "20/03/2023 – 11/06/2024",
         alt: 'Indra Logo',
         title: 'Indra',
       },
       {
         imagen: "/image/icons/infibail.webp",
-        description: 'Madrid, España',
+        description: 'Madrid, Spain',
         fecha: "18/09/2021 – 21/06/2022",
         alt: 'Infibail logo',
         title: 'Infibail',
@@ -39,10 +54,10 @@ const contentMap = {
       { title: 'Compulsory Secondary Education', description: 'Colegio Ártica.' }
     ],
     left: [
-      { imagen: "/image/icons/UEM.webp", description: 'Madrid, España', fecha: "18/09/2023 – 21/06/2024", alt: 'UEM Logo', title: 'UEM' },
-      { imagen: "/image/icons/SMA.webp", description: 'Madrid, España', fecha: "18/09/2020 – 21/06/2022", alt: 'SMA logo', title: 'SMA' },
-      { imagen: "/image/icons/SAE.webp", description: 'Madrid, España', fecha: "12/09/2016 – 20/06/2017", alt: 'SAE logo', title: 'SAE' },
-      { imagen: "/image/icons/ART.webp", description: 'Madrid, España', fecha: "08/09/2010 – 21/06/2014", alt: 'colegio artica logo', title: 'ART' },
+      { imagen: "/image/icons/UEM.webp", description: 'Madrid, Spain', fecha: "18/09/2023 – 21/06/2024", alt: 'UEM Logo', title: 'UEM' },
+      { imagen: "/image/icons/SMA.webp", description: 'Madrid, Spain', fecha: "18/09/2020 – 21/06/2022", alt: 'SMA logo', title: 'SMA' },
+      { imagen: "/image/icons/SAE.webp", description: 'Madrid, Spain', fecha: "12/09/2016 – 20/06/2017", alt: 'SAE logo', title: 'SAE' },
+      { imagen: "/image/icons/ART.webp", description: 'Madrid, Spain', fecha: "08/09/2010 – 21/06/2014", alt: 'colegio artica logo', title: 'ART' },
     ],
   },
   'Curses': {
@@ -56,13 +71,13 @@ const contentMap = {
       { title: 'CCNAv7: Introduction to Networks', description: 'European University of Madrid. Instructor: Ricardo Laorga Suárez' },
     ],
     left: [
-      { imagen: "/image/icons/hardvard.webp", description: 'Madrid, España', fecha: "19/05/2024 – Actualmente", alt: 'hardvar Logo', title: 'HRV' },
-      { imagen: "/image/icons/cisco.webp", description: 'Madrid, España', fecha: "19/05/2024 – Actualmente", alt: 'hardvar Logo', title: 'CISCO' },
-      { imagen: "/image/icons/cisco.webp", description: 'Madrid, España', fecha: "11/12/2023", alt: 'hardvar Logo', title: 'CISCO' },
-      { imagen: "/image/icons/cisco.webp", description: 'Madrid, España', fecha: "11/12/2023", alt: 'hardvar Logo', title: 'CISCO' },
-      { imagen: "/image/icons/cisco.webp", description: 'Madrid, España', fecha: "30/11/2023", alt: 'hardvar Logo', title: 'CISCO' },
-      { imagen: "/image/icons/cisco.webp", description: 'Madrid, España', fecha: "10/01/2023", alt: 'hardvar Logo', title: 'CISCO' },
-      { imagen: "/image/icons/cisco.webp", description: 'Madrid, España', fecha: "21/06/2021", alt: 'hardvar Logo', title: 'CISCO' },
+      { imagen: "/image/icons/hardvard.webp", description: 'Madrid, Spain', fecha: "19/05/2024 – 20/11/2024", alt: 'hardvar Logo', title: 'HRV' },
+      { imagen: "/image/icons/cisco.webp", description: 'Madrid, Spain', fecha: "19/05/2024 – Actualmente", alt: 'hardvar Logo', title: 'CISCO' },
+      { imagen: "/image/icons/cisco.webp", description: 'Madrid, Spain', fecha: "11/12/2023", alt: 'hardvar Logo', title: 'CISCO' },
+      { imagen: "/image/icons/cisco.webp", description: 'Madrid, Spain', fecha: "11/12/2023", alt: 'hardvar Logo', title: 'CISCO' },
+      { imagen: "/image/icons/cisco.webp", description: 'Madrid, Spain', fecha: "30/11/2023", alt: 'hardvar Logo', title: 'CISCO' },
+      { imagen: "/image/icons/cisco.webp", description: 'Madrid, Spain', fecha: "10/01/2023", alt: 'hardvar Logo', title: 'CISCO' },
+      { imagen: "/image/icons/cisco.webp", description: 'Madrid, Spain', fecha: "21/06/2021", alt: 'hardvar Logo', title: 'CISCO' },
     ],
   },
   'Projects': {
@@ -156,6 +171,7 @@ const DynamicContent = () => {
               {rightContent[index] && (
                 <div className="right-column">
                   <h2>{rightContent[index].title}</h2>
+                  <h3>{rightContent[index].subtitle}</h3>
                   <p>{item.fecha}</p>
                   <footer>{item.description}</footer>
                   <p>{rightContent[index].description}</p>

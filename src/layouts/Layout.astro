@@ -1,7 +1,6 @@
 ---
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
-import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
     title: string;
@@ -21,7 +20,6 @@ const { title } = Astro.props;
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <ViewTransitions/>
     </head>
     <body id="root">
         <Header/>
@@ -42,7 +40,7 @@ const { title } = Astro.props;
 	font-style: normal;
 }
     :root{
-        --background:#121212;
+        --background:rgb(16, 16, 14,0.9);
         --alterBackground:#10100e;
         --title:#8e8964;
         --text:#f6f6f6;
@@ -72,7 +70,7 @@ const { title } = Astro.props;
         justify-content: space-around;
         row-gap: 50px;
         position: relative;
-        background-color: var(--background);
+        background-color: var(--alterBackground);
         z-index: 1;
     }
     main::after{
@@ -187,6 +185,13 @@ const { title } = Astro.props;
         font-size: 30px;
         text-decoration: underline var(--title); 
     }
+    .container h3 {
+        color: var(--title);
+        font-style: italic;
+        max-width: 700px;
+        margin: 0;
+        font-size: 25px;
+    }
     .container p {
         color: var(--text);
         opacity: 0.7;
@@ -231,6 +236,9 @@ const { title } = Astro.props;
     }
     .main-content button:active {
         border: none;
+    }
+    #Geopost::before {
+        background: linear-gradient(to bottom, #e10033, #111111, #fff);
     }
     #Indra::before {
         background: linear-gradient(to bottom, #fff, #12436d);
@@ -279,6 +287,9 @@ const { title } = Astro.props;
     }
     #MS::before {
         background: linear-gradient(to bottom, #df7e45, #df7e45, #fff);
+    }
+    #JC::before {
+        background: linear-gradient(to bottom, #5333d2, #5333d2, #f2cf3d);
     }
     #JC::before {
         background: linear-gradient(to bottom, #5333d2, #5333d2, #f2cf3d);
